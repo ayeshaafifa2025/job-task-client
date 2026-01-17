@@ -1,36 +1,51 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+Project Name: Aura Dining
+A modern web application for a global fusion restaurant where users can explore a diverse menu of signature dishes. The project focuses on a high-end visual experience and smooth navigation.
+live url: 
 
-## Getting Started
+Setup and Installation
+Follow these steps to set up the project locally:
 
-First, run the development server:
+Clone the repository: 
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Install dependencies: npm install
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Environment Variables: Create a .env.local file in the root folder and add your backend URL: NEXT_PUBLIC_API_URL=http://localhost:5000
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+Run the development server: npm run dev
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+The application will be available at http://localhost:3000.
 
-## Learn More
+Route Summary
+/ : Home page with hero section and gallery.
 
-To learn more about Next.js, take a look at the following resources:
+/foods : Menu page showing the full list of food items.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+/foods/:id : Detailed view of a single food item.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+/login : User login page (Mock login implementation).
 
-## Deploy on Vercel
+Implemented Features
+Detailed Food View: A side-by-side layout for large screens showing food images and information together.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Responsive Design: The layout switches to a column view on mobile devices for better readability.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Dynamic Data: Food details are fetched from the database based on the unique ID in the URL.
+
+Skeleton Loading: Custom loading states to prevent layout shifts while fetching data.
+
+Glassmorphism UI: Semi-transparent backgrounds and blurred effects for a modern look.
+
+Mock Authentication: Includes a login form and mock login functionality for user access.
+
+Brief Explanation of Features
+Food Details Layout
+The details page is designed to balance the image and the text description. On laptops, the image and info sections are side-by-side so the user can see everything at once. On smaller screens, it automatically stacks vertically.
+
+Mock Login System
+The project includes a login route with a dedicated form. This allows for a mock authentication flow where users can interact with login inputs before accessing certain parts of the site.
+
+Data Management
+Data is pulled dynamically from a MongoDB backend. The application handles the specific ID segments to ensure that clicking on any food card opens the correct details for that specific dish.
+
+Styling and Theme
+The project uses Tailwind CSS for styling. It features a dark theme with amber accents and subtle background glows to maintain a premium aesthetic across all pages.
