@@ -1,6 +1,6 @@
 Project Name: Aura Dining
 A modern web application for a global fusion restaurant where users can explore a diverse menu of signature dishes. The project focuses on a high-end visual experience and smooth navigation.
-live url: 
+
 
 Setup and Installation
 Follow these steps to set up the project locally:
@@ -9,7 +9,7 @@ Clone the repository:
 
 Install dependencies: npm install
 
-Environment Variables: Create a .env.local file in the root folder and add your backend URL: NEXT_PUBLIC_API_URL=http://localhost:5000
+Environment Variables: Create a .env.local file in the root folder and add your backend URL
 
 Run the development server: npm run dev
 

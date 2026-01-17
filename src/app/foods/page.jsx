@@ -10,7 +10,7 @@ const FoodsPage = () => {
     useEffect(() => {
         const fetchFoods = async () => {
             try {
-                const res = await fetch('http://localhost:5000/foods');
+                const res = await fetch('https://job-task-server-six-beta.vercel.app/foods');
                 const data = await res.json();
                 setFoods(data);
             } catch (error) {
